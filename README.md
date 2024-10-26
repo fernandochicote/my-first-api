@@ -89,23 +89,23 @@ Elimina una película.
 
 Redirige automáticamente a la documentación de la API.
 
-## Docker
+## Docker Compose
 
-Puedes ejecutar la aplicación usando Docker:
+Este proyecto incluye un archivo `docker-compose.yml` para facilitar el despliegue en un entorno Dockerizado.
 
-1. Construye la imagen:
-
-   ```bash
-   docker-compose build
-   ```
-
-2. Inicia el contenedor:
+1. Construye y ejecuta la aplicación usando Docker Compose:
 
    ```bash
-   docker-compose up
+   docker-compose up --build
    ```
 
-La API estará disponible en `http://localhost:8000`.
+2. La API estará disponible en `http://localhost:8000`.
+
+Para detener y remover los contenedores:
+
+```bash
+docker-compose down
+```
 
 ## Pruebas
 
@@ -117,4 +117,4 @@ pytest
 
 ## Licencia
 
-Este proyecto está licenciado bajo la licencia Apache 2.0. Consulta el archivo [LICENSE](LICENSE) para más detalles.
+Este proyecto está licenciado bajo la **GNU General Public License**. Consulta el archivo [LICENSE](LICENSE) para más detalles.
