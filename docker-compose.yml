@@ -1,0 +1,9 @@
+services:
+  fast-api:
+    build: /api
+    image: eoi-fastapi
+    container_name: api
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./api:/code
