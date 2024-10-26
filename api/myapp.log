@@ -69,3 +69,6 @@ To install, run: pip install email-validator
 2024-10-26 14:22:32 - WARNING - models.py - email-validator not installed, email fields will be treated as str.
 To install, run: pip install email-validator
 2024-10-26 14:22:53 - INFO - movies.py - special header my-special-header rest Headers({'host': 'localhost:8000', 'connection': 'keep-alive', 'sec-ch-ua-platform': '"Windows"', 'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36', 'accept': 'application/json', 'my-special-header': 'my-special-header', 'sec-ch-ua': '"Chromium";v="130", "Google Chrome";v="130", "Not?A_Brand";v="99"', 'sec-ch-ua-mobile': '?0', 'sec-fetch-site': 'same-origin', 'sec-fetch-mode': 'cors', 'sec-fetch-dest': 'empty', 'referer': 'http://localhost:8000/docs', 'accept-encoding': 'gzip, deflate, br, zstd', 'accept-language': 'es-ES,es;q=0.9', 'cookie': 'ajs_anonymous_id=a6123613-d7d2-4137-be2a-539bea99e659; ajs_user_id=9538927e-92ae-4c3e-86a5-a17562cf70c5'})
+2024-10-26 14:38:38 - INFO - main.py - Petición a /, redirigiendo a /docs.
+2024-10-26 14:38:38 - WARNING - models.py - email-validator not installed, email fields will be treated as str.
+To install, run: pip install email-validator

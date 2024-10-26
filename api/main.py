@@ -13,8 +13,8 @@ app = FastAPI(description=descripcion,
                         "url": "https://github.com/fernandochicote",
                         "email": "fechicot@gmail.com"},
             license_info={
-                        "name": "Apache 2.0",
-                        "url": "https://www.apache.org/licenses/LICENSE-2.0.html",
+                        "name": "GPL-3.0",
+                        "url": "https://www.gnu.org/licenses/gpl-3.0.html",
                     },
             openapi_tags = [
                                 {
