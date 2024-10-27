@@ -1,14 +1,14 @@
 from fastapi import FastAPI
 from fastapi.responses import RedirectResponse
 import uvicorn
-from  routers import holamundo, movies
+from  routers import holamundo, movies, kv
 from logger import log
 
 descripcion = 'Aplicación sencilla para mostrar funcionalidades de FastAPI'
 
 app = FastAPI(description=descripcion,
-            version='0.0.2',
-            title='Máster EOI - API Hola Mundo',
+            version='0.0.3',
+            title='Máster EOI - FastAPI API',
             contact={ "name": "Fernando Chicote",
                         "url": "https://github.com/fernandochicote",
                         "email": "fechicot@gmail.com"},
@@ -18,8 +18,16 @@ app = FastAPI(description=descripcion,
                     },
             openapi_tags = [
                                 {
-                                    "name": "hola",
+                                    "name": "holamundo",
                                     "description": "Operations para saludar",
+                                },
+                                                                {
+                                    "name": "movies",
+                                    "description": "Operations CRUD sobre peliculas",
+                                },
+                                                                {
+                                    "name": "kv",
+                                    "description": "Operaciones clave-valor",
                                 }
                         ]                   
 )
@@ -27,6 +35,7 @@ app = FastAPI(description=descripcion,
 # API Routers
 app.include_router(holamundo.router)
 app.include_router(movies.router)
+app.include_router(kv.router)
 
 @app.get("/", include_in_schema=False)
 def redirigir():
