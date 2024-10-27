@@ -4,3 +4,4 @@ redis
 pyjwt
 passlib[bcrypt]
 python-multipart
+elastic-apm

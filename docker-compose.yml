@@ -14,3 +14,30 @@ services:
       - "6379:6379"
     volumes:
       - ./data:/data
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.8.0
+    container_name: elastic
+    ports:
+      - "9200:9200"
+      - "9300:9300"
+    environment:
+      - discovery.type=single-node
+  kibana:
+    image: docker.elastic.co/kibana/kibana:7.8.0
+    container_name: kibana
+    ports:
+      - "5601:5601"
+    links:
+      - elasticsearch
+    depends_on:
+      - elasticsearch
+  apm-server:
+    image: docker.elastic.co/apm/apm-server:7.8.0
+    container_name: apm-server
+    ports:
+      - "8200:8200"
+    depends_on:
+      - elasticsearch
+    links:
+      - elasticsearch
+      - kibana
